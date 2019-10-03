@@ -1,7 +1,4 @@
 // Definimos el objeto persona
-var tlf = prompt('¿Cual es tu num de telefono?');
-var horoscopo = prompt('¿Cual es tu horoscopo?');
-
 var persona = {
     nombre: 'Diego',
     apellido: 'Vallejo',
@@ -21,17 +18,24 @@ var persona = {
     }
 };
 
-// Mostramos el Objeto coche 
-document.getElementById("objP").innerHTML = ' ' + persona.datPer(this.tlf, this.horoscopo);
+// Mostramos el Objeto persona
+document.getElementById("objP").innerHTML = ' ' + persona.nombre;
 
-// Mostramos las propiedades del objeto coche 
-document.getElementById("marca").innerHTML = ' ' + coche.marca;
-document.getElementById("modelo").innerHTML = ' ' + coche.modelo;
-document.getElementById("color").innerHTML = ' ' + coche.color;
-document.getElementById("acabado").innerHTML = ' ' + coche.acabado.premium + ' - ' + coche.acabado.elite +
-    ' - ' + coche.acabado.gT;
-document.getElementById("peso").innerHTML = ' ' + coche.peso[0] + ' - ' + coche.peso[1] +
-    ' - ' + coche.peso[2] + ' - ' + coche.peso[3];
-document.getElementById("contaminacion").innerHTML = ' ' + coche.contaminacion;
-document.getElementById("combustible").innerHTML = ' ' + coche.combustible;
-document.getElementById("fiabilidad").innerHTML = ' ' + coche.fiabilidad;
+// Mostramos los atributos del objeto persona
+document.getElementById("nom").innerHTML = ' ' + persona.nombre;
+document.getElementById("ape").innerHTML = ' ' + persona.apellido;
+document.getElementById("ide").innerHTML = ' ' + persona.id;
+document.getElementById("dir").innerHTML = ' ' + persona.direccion;
+document.getElementById("cp").innerHTML = ' ' + persona.cp;
+document.getElementById("nomC").innerHTML = ' ' + persona.nomCom();
+document.getElementById("dirC").innerHTML = ' ' + persona.dirCom();
+document.getElementById("tlf").innerHTML = ' ' + persona.tlf;
+document.getElementById("hor").innerHTML = ' ' + persona.horoscopo;
+
+// prompt() para pedir los argumentos que luego se pasaran como parametros a la funcion datPer()
+var tlf = prompt('¿Cual es tu num de telefono?');
+var horoscopo = prompt('¿Cual es tu horoscopo?').toUpperCase();
+
+// Mostramos los datos pedidos por pantalla usando prompt() como parametros
+document.getElementById("tlfUser").innerHTML = ' ' + persona.datPer(this.tlf, ' ');
+document.getElementById("hrUser").innerHTML = ' ' + persona.datPer(this.horoscopo, ' ');
